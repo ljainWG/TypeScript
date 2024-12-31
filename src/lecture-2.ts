@@ -47,3 +47,32 @@ let account: [number, string] = [1,"typescript"];
 account.push(1);            // we can push new elements
 // console.log(account);   
 // this is some gap or bugs in ts, which will be removed in future
+
+// enums
+enum Gender{
+    Male=4, Female=2, Other=3   // 4,2,3 are the values associated with male, female, other, or if we want to assign default values 0,1,2 then donot write them there
+}
+
+enum Size{
+    Small = 0, Medium = 3.2, Large = 'large'
+    // we can also assign string values if we want
+}
+
+let myGender: Gender = Gender.Male;
+console.log(myGender);              // 4
+console.log(myGender.valueOf());    // 4
+
+let mySize_1: Size = "large" as Size;
+let mySize_2: Size = 0 as Size;
+console.log(mySize_1);    // large
+console.log(mySize_1.valueOf());    // large
+console.log(mySize_2);     // 0 not Small
+
+// how to print Small, Medium or Large  or Male, Female or Other ?
+// by default cosole.log(myEnum) prints the enum-assigned-value of enum varibale
+// we should define an enum with const keyword because then more optimised code will be generated
+const enum Role{
+    PATIENT=1, DOCTOR=3, NURSE=2, ADMIN=4
+}
+let myRole: Role = Role.ADMIN;
+console.log(myRole);        // 4
