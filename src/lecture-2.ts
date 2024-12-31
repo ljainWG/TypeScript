@@ -76,3 +76,34 @@ const enum Role{
 }
 let myRole: Role = Role.ADMIN;
 console.log(myRole);        // 4
+
+// functions
+// without explicitly specifying the return type
+function getData () {
+    return 0;
+}
+
+// explicitly specifying the return type
+function calculateTax (salary:number) : number {
+    return 0;
+}
+
+function calculateProduct (num1:number, num2:number) : number {
+    return num1+num2;
+}
+// let result = calculateProduct(2);        // Error
+// in ts , by default all params/ args are compulsory
+let result = calculateProduct(2,3);  
+
+// to make optional parameters/ args we use argName?: datatype in function defination, to make argName arg optional
+function calculateSum (num1:number, num2:number, num3?:number) : number {
+    return num1+num2;
+}
+result = calculateSum(1,2);
+
+// we can do the same by providing the default value, but this is applicable for last argument only
+function sayHello(num1:number, num2:number, num3:number = 3) : number{
+    return num1+num2+num3;
+}
+result = sayHello(1,2);
+result = sayHello(1,2,3);
