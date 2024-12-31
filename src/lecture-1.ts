@@ -22,9 +22,10 @@ console.log("Hello");
 //      -> noEmitOnError this enables to generate js code even of ts file has error in it
 //      -> sourceMap this enables us to run our code line by line in case of bug and we have to debugg it, it generates a .js.map file, which is for machines, for us we have to create nodejs launch.json file to bug it from debug panel,  and we have to add "preLaunchTask":"tsc: build - tsconfig.json" line, then save it and now we can debug it(ts file/ code) 
 
-//      -> noImplicitReturn check this setting and see what it does, it might be useful ?
+//      -> noImplicitReturns check this setting and see what it does, it might be useful ?
 //      -> noImplicitAny
 //      -> noUnusedLocals
+//      -> noUnusedParameters
 
 
 // we can use command : tsc to compile all code present in root directory or which is set in rootDir of Modules
